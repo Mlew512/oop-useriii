@@ -12,11 +12,11 @@ class FreeUser(User):
         return self._post
             
     # Your PremiumUser class goes here
-    def create_post(self):
+    def create_post(self, post):
         if self._post < 2:
             User.post_counter += 1
             self._post += 1
-            post = input("what would you like to post? : ...")
+            # post = input("what would you like to post? : ...")
             new_post = f"{self._name} : {post}"
             User.posts[User.post_counter] = new_post
             print(User.posts)
